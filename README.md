@@ -180,11 +180,11 @@ sudo mysql_secure_installation
 ```
 During the mysql_secure_installation process, you will be prompted to configure various settings:
 
-**Set the root password:** Choose a secure password for the MySQL root user.
-**Remove anonymous users:** Yes
-**Disallow root login remotely:** Yes
-**Remove test database and access to it:** Yes
-**Reload privilege tables now:** Yes
+**Set the root password:** Choose a secure password for the MySQL root user.<br>
+**Remove anonymous users:** Yes<br>
+**Disallow root login remotely:** Yes<br>
+**Remove test database and access to it:** Yes<br>
+**Reload privilege tables now:** Yes<br>
 
 
 # Installing and Configuring PHP
