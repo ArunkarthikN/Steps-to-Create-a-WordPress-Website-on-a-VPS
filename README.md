@@ -158,6 +158,35 @@ sudo a2ensite example.com.conf
 # Preparing MySQL Database
 Create a MySQL database and user for your WordPress installation, and configure the database for secure access.
 
+1. Log in to MySQL:
+
+```sh
+   sudo mysql -u root
+```
+
+2. Create a new database and user:
+
+```sh
+CREATE DATABASE database_name;
+CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON database_name.* TO 'username'@'localhost' IDENTIFIED BY 'password';
+FLUSH PRIVILEGES;
+```
+
+Run the MySQL secure installation script to improve security:
+
+```sh
+sudo mysql_secure_installation
+```
+During the mysql_secure_installation process, you will be prompted to configure various settings:
+
+**Set the root password:** Choose a secure password for the MySQL root user.
+**Remove anonymous users:** Yes
+**Disallow root login remotely:** Yes
+**Remove test database and access to it:** Yes
+**Reload privilege tables now:** Yes
+
+
 # Installing and Configuring PHP
 Modify PHP settings to accommodate WordPress requirements, ensuring optimal performance and functionality.
 
