@@ -97,7 +97,7 @@ sudo tasksel install lamp-server
 
 ```sh
 
-sudo apt install php-curl php-gd php-mbstring php-xml php-xmlrpc
+sudo apt install php php-curl php-gd php-mbstring php-xml php-xmlrpc
 
 ```
 
@@ -206,9 +206,33 @@ post_max_size = 21M
 ```
 
    
-
 # Installing and Configuring WordPress
 Download and install WordPress, configure database settings, and set up your site for initial use.
+
+1. Navigate to your web directory and download WordPress:
+
+```sh
+   cd /var/www/example.com
+```
+
+2. Download and extract WordPress:
+
+```sh
+wget https://wordpress.org/latest.tar.gz
+tar -xzvf latest.tar.gz
+mv wordpress/* .
+rm -rf wordpress latest.tar.gz
+mv index.html ..
+```
+3. Configure WordPress:
+
+```sh
+mv wp-config-sample.php wp-config.php
+sudo nano wp-config.php
+```
+
+4. Update database credentials in **wp-config.php**.
+
 
 # Enabling SSL
 Install and configure SSL certificates using Certbot to secure your website with HTTPS.
