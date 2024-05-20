@@ -279,6 +279,19 @@ These adjustments should help Apache perform efficiently on a small server with 
 # Enabling SSL
 Install and configure SSL certificates using Certbot to secure your website with HTTPS.
 
+1. Install Certbot for SSL:
+
+ ```sh
+sudo apt-get install python3-certbot-apache
+```
+
+2. Obtain and install SSL certificates:
+
+```sh
+sudo certbot --apache -m youremail@gmail.com -d example.com -d www.example.com
+```
+
+
 # Scheduling SSL Certificate Renewal
 Set up a cron job to automatically renew SSL certificates, ensuring continuous security.
 
