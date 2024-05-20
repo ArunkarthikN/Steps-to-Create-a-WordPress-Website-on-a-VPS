@@ -148,12 +148,12 @@ sudo cp /var/www/html/index.html /var/www/example.com/index.html
 
 6. Disable the default site and enable your site:
 
-   ```sh
+```sh
 sudo a2dissite 000-default.conf
 sudo a2ensite example.com.conf
-
-
 ```
+
+
 
 # Preparing MySQL Database
 Create a MySQL database and user for your WordPress installation, and configure the database for secure access.
