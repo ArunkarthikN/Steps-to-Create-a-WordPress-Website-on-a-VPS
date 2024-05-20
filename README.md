@@ -251,7 +251,7 @@ Download and install WordPress, configure database settings, and set up your sit
 ```sh
 wget https://wordpress.org/latest.tar.gz
 tar -xzvf latest.tar.gz
-mv wordpress/* .
+mv wordpress/* ..
 rm -rf wordpress latest.tar.gz
 mv index.html ..
 ```
