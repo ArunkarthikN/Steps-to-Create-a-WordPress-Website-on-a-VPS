@@ -291,6 +291,20 @@ sudo apt-get install python3-certbot-apache
 sudo certbot --apache -m youremail@gmail.com -d example.com -d www.example.com
 ```
 
+3. Configure WordPress for SSL:
+
+```sh
+sudo nano wp-config.php
+```
+
+4. Add the following lines:
+
+```sh
+define( 'WP_HOME', 'https://example.com' );
+define( 'WP_SITEURL', 'https://example.com' );
+define('FORCE_SSL_ADMIN', true);
+```
+
 
 # Scheduling SSL Certificate Renewal
 Set up a cron job to automatically renew SSL certificates, ensuring continuous security.
