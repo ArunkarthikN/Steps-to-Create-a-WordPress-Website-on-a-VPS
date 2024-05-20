@@ -2,7 +2,7 @@
 This repository provides a comprehensive guide to setting up a WordPress website on a Virtual Private Server (VPS) using a LAMP stack (Linux, Apache, MySQL, PHP). The guide covers system preparation, installation, configuration, and optimization steps to ensure your WordPress site runs smoothly and securely.
 
 # Table of Contents
-1. [System Preparation](# System Preparation)
+1. [System Preparation](#System-Preparation)
 2. Setting Up Swap Space
 3. Installing LAMP Server
 4. Configuring Apache for Your Domain
