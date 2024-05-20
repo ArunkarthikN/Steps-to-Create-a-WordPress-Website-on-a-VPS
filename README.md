@@ -18,8 +18,22 @@ This repository provides a comprehensive guide to setting up a WordPress website
 # System Preparation
 Update the system and configure the /etc/hosts file to include your IP and domain names.
 
+1. Open the hosts file
+
 ```sh
 sudo nano /etc/hosts
+```
+2. Add your IP and domain names
+   ```sh
+your_ipaddress yourdomainname(example.com)
+
+```
+
+## 2. Update and Upgrade the System
+Update and upgrade the package lists:
+
+```sh
+sudo apt update && sudo apt upgrade
 ```
 
 
