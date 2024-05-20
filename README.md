@@ -1,5 +1,5 @@
 # Steps to create a WordPress website on a VPS for free
-This repository provides a comprehensive guide to setting up a WordPress website on a Virtual Private Server (VPS) using a LAMP stack (Linux, Apache, MySQL, PHP). The guide covers system preparation, installation, configuration, and optimization steps to ensure your WordPress site runs smoothly and securely.
+This repository provides a comprehensive guide to setting up a WordPress website on a Virtual Private Server (VPS) using a LAMP stack (Linux, Apache, MySQL, PHP). The guide covers system preparation, installation, configuration, and optimization steps to ensure your WordPress site runs smoothly and securely. And It's noteworthy that WordPress is installed on the VPS free of charge, with only the VPS charges starting from a minimum of $5 USD.
 
 # Table of Contents
 1. [System Preparation](#system-preparation)
