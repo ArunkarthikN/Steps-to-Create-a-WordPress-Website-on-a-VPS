@@ -24,12 +24,11 @@ Update the system and configure the /etc/hosts file to include your IP and domai
 sudo nano /etc/hosts
 ```
 2. Add your IP and domain names
-   ```sh
+```sh
 your_ipaddress yourdomainname(example.com)
-
 ```
 
-## 2. Update and Upgrade the System
+3. Update and Upgrade the System
 Update and upgrade the package lists:
 
 ```sh
