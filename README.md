@@ -190,6 +190,23 @@ During the mysql_secure_installation process, you will be prompted to configure 
 # Installing and Configuring PHP
 Modify PHP settings to accommodate WordPress requirements, ensuring optimal performance and functionality.
 
+1. Edit the php.ini file:
+
+```sh
+cd /etc/php/8.2/apache2
+sudo nano php.ini
+```
+
+2. Search and Modify the following settings:
+
+```sh
+max_input_time = 30
+upload_max_filesize = 30M
+post_max_size = 21M
+```
+
+   
+
 # Installing and Configuring WordPress
 Download and install WordPress, configure database settings, and set up your site for initial use.
 
