@@ -126,7 +126,7 @@ sudo nano example.com.conf
 
 4. Change the contents to:
 
-   ```sh
+```sh
 <VirtualHost *:80>
     ServerName example.com
     ServerAlias www.example.com
