@@ -13,7 +13,7 @@ This repository provides a comprehensive guide to setting up a WordPress website
 9. [Scheduling SSL Certificate Renewal](#scheduling-ssl-certificate-renewal)
 10. [Adjusting Permissions and .htaccess](#adjusting-permissions-and-htaccess)
 11. [Tuning PHP Settings for WordPress](#tuning-php-settings-for-wordpress)
-12. [Uploading the Project to GitHub](#uploading-the-project-to-github)
+
 
 # System Preparation
 Update the system and configure the /etc/hosts file to include your IP and domain names.
