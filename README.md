@@ -2,18 +2,18 @@
 This repository provides a comprehensive guide to setting up a WordPress website on a Virtual Private Server (VPS) using a LAMP stack (Linux, Apache, MySQL, PHP). The guide covers system preparation, installation, configuration, and optimization steps to ensure your WordPress site runs smoothly and securely.
 
 # Table of Contents
-1. [System Preparation](#System-Preparation)
-2. Setting Up Swap Space
-3. Installing LAMP Server
-4. Configuring Apache for Your Domain
-5. Preparing MySQL Database
-6. Installing and Configuring PHP
-7. Installing and Configuring WordPress
-8. Enabling SSL
-9. Scheduling SSL Certificate Renewal
-10. Adjusting Permissions and .htaccess
-11. Tuning PHP Settings for WordPress
-12. Uploading the Project to GitHub
+1. [System Preparation](#system-preparation)
+2. [Setting Up Swap Space](#setting-up-swap-space)
+3. [Installing LAMP Server](#installing-lamp-server)
+4. [Configuring Apache for Your Domain](#configuring-apache-for-your-domain)
+5. [Preparing MySQL Database](#preparing-mysql-database)
+6. [Installing and Configuring PHP](#installing-and-configuring-php)
+7. [Installing and Configuring WordPress](#installing-and-configuring-wordpress)
+8. [Enabling SSL](#enabling-ssl)
+9. [Scheduling SSL Certificate Renewal](#scheduling-ssl-certificate-renewal)
+10. [Adjusting Permissions and .htaccess](#adjusting-permissions-and-htaccess)
+11. [Tuning PHP Settings for WordPress](#tuning-php-settings-for-wordpress)
+12. [Uploading the Project to GitHub](#uploading-the-project-to-github)
 
 # System Preparation
 Update the system and configure the /etc/hosts file to include your IP and domain names.
