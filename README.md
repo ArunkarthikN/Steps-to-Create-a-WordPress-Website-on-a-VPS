@@ -104,6 +104,56 @@ sudo apt install php-curl php-gd php-mbstring php-xml php-xmlrpc
 # Configuring Apache for Your Domain
 Set up Apache virtual hosts to serve your domain, and create the necessary directory structure for your site.
 
+1. Navigate to Apache's sites-available directory:
+
+```sh
+cd /etc/apache2/sites-available/
+
+```
+2. Copy the default configuration file to a new file for your site:
+
+   ```sh
+sudo cp 000-default.conf example.com.conf
+```
+
+3. Edit the new configuration file:
+
+```sh
+sudo nano example.com.conf
+
+```
+
+4. Change the contents to:
+
+   ```sh
+<VirtualHost *:80>
+    ServerName example.com
+    ServerAlias www.example.com
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/example.com
+    <Directory /var/www/example.com>
+        Require all granted
+    </Directory>
+</VirtualHost>
+
+```
+5. Create the website directory and copy the index.html file:
+
+```sh
+sudo mkdir -p /var/www/example.com
+sudo cp /var/www/html/index.html /var/www/example.com/index.html
+
+```
+
+6. Disable the default site and enable your site:
+
+   ```sh
+sudo a2dissite 000-default.conf
+sudo a2ensite example.com.conf
+
+
+```
+
 # Preparing MySQL Database
 Create a MySQL database and user for your WordPress installation, and configure the database for secure access.
 
