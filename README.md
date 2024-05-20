@@ -20,7 +20,7 @@ Update the system and configure the /etc/hosts file to include your IP and domai
 
 ```sh
 sudo nano /etc/hosts
-```sh
+```
 
 
 # Setting Up Swap Space
