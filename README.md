@@ -18,6 +18,10 @@ This repository provides a comprehensive guide to setting up a WordPress website
 # System Preparation
 Update the system and configure the /etc/hosts file to include your IP and domain names.
 
+'''sh
+sudo nano /etc/hosts
+
+
 # Setting Up Swap Space
 Create an 8GB swap file to improve system performance.
 
