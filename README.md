@@ -233,6 +233,48 @@ sudo nano wp-config.php
 
 4. Update database credentials in **wp-config.php**.
 
+# Configure Apache for Performance
+
+ 1. Edit the prefork module configuration:
+
+```sh
+sudo nano /etc/apache2/mods-enabled/mpm_prefork.conf
+```
+
+2. Adjust the following settings:
+
+For a small server with limited resources, Here's an example of how you could adjust those settings:
+
+   ```sh
+<IfModule mpm_prefork_module>
+    StartServers            5
+    MinSpareServers         5
+    MaxSpareServers         10
+    ServerLimit             20
+    MaxClients              20
+    MaxRequestWorkers       20
+    MaxConnectionsPerChild  3000
+</IfModule>
+```
+
+**Explanation of adjustments:**
+
+**StartServers:** This directive sets the number of child server processes created on startup. For a small server, setting this to a lower value like 5 ensures that Apache doesn't consume too much memory upon startup.
+
+**MinSpareServers:** This directive sets the minimum number of idle child server processes. Keeping it low prevents Apache from maintaining too many idle processes, conserving resources.
+
+**MaxSpareServers:** This directive sets the maximum number of idle child server processes. A value of 10 ensures that Apache doesn't maintain too many spare processes, again conserving resources.
+
+**ServerLimit:** This directive sets the maximum configured value for the number of server processes. Since this is a small server, setting it to 20 limits the number of processes Apache can create.
+
+**MaxClients:** This directive sets the maximum number of simultaneous client connections that Apache will serve. Setting it to 20 ensures that Apache doesn't overwhelm the server with too many connections.
+
+**MaxRequestWorkers:** This directive sets the maximum number of simultaneous requests that Apache will handle. Keeping it at 20 aligns with the MaxClients directive.
+
+**MaxConnectionsPerChild:** This directive sets the maximum number of connections a child server process will handle. A lower value like 3000 ensures that Apache recycles processes more frequently, reducing memory consumption.
+
+These adjustments should help Apache perform efficiently on a small server with limited resources. Adjust these values further based on your specific server's resources and workload requirements.
+
 
 # Enabling SSL
 Install and configure SSL certificates using Certbot to secure your website with HTTPS.
