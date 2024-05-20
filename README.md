@@ -309,8 +309,49 @@ define('FORCE_SSL_ADMIN', true);
 # Scheduling SSL Certificate Renewal
 Set up a cron job to automatically renew SSL certificates, ensuring continuous security.
 
+1. Edit crontab:
+
+```sh
+sudo crontab -e
+```
+
+2. Add the following line:
+
+```sh
+0 1 * * * /usr/bin/certbot renew & > /dev/null
+```
+   
+
 # Adjusting Permissions and .htaccess
 Configure file and directory permissions for WordPress, and update the .htaccess file for URL rewriting and performance tuning.
+
+1. Set permissions for WordPress:
+
+```sh
+   sudo chown -R www-data:www-data /var/www/example.com
+```
+
+2. Edit Apache configuration for .htaccess:
+
+ ```sh
+ sudo nano /var/www/example.com/.htaccess
+```
+
+3. Add the following contents:
+
+```sh
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
+```
+
 
 # Tuning PHP Settings for WordPress
 Adjust PHP settings in the .htaccess file to handle larger uploads and optimize execution times.
