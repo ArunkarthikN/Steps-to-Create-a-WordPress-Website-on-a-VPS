@@ -76,6 +76,31 @@ htop
 # Installing LAMP Server
 Install and configure the LAMP stack, including Apache, MySQL, and PHP, along with additional PHP modules required for WordPress.
 
+1. Install tasksel:
+
+```sh
+
+sudo apt install tasksel
+
+```
+
+2. Install LAMP server:
+
+```sh
+
+sudo tasksel install lamp-server
+
+
+```
+
+3. Install additional PHP modules:
+
+```sh
+
+sudo apt install php-curl php-gd php-mbstring php-xml php-xmlrpc
+
+```
+
 # Configuring Apache for Your Domain
 Set up Apache virtual hosts to serve your domain, and create the necessary directory structure for your site.
 
