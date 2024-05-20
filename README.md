@@ -112,8 +112,9 @@ cd /etc/apache2/sites-available/
 ```
 2. Copy the default configuration file to a new file for your site:
 
-   ```sh
+```sh
 sudo cp 000-default.conf example.com.conf
+
 ```
 
 3. Edit the new configuration file:
