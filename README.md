@@ -18,7 +18,7 @@ This repository provides a comprehensive guide to setting up a WordPress website
 # System Preparation
 Update the system and configure the /etc/hosts file to include your IP and domain names.
 
-'''sh
+```sh
 sudo nano /etc/hosts
 
 
