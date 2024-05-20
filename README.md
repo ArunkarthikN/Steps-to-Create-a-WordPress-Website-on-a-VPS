@@ -18,12 +18,12 @@ This repository provides a comprehensive guide to setting up a WordPress website
 # System Preparation
 Update the system and configure the /etc/hosts file to include your IP and domain names.
 
-1. Open the hosts file
+1. Open the hosts file:
 
 ```sh
 sudo nano /etc/hosts
 ```
-2. Add your IP and domain names
+2. Add your IP and domain names:
 ```sh
 your_ipaddress yourdomainname(example.com)
 ```
@@ -37,7 +37,41 @@ sudo apt update && sudo apt upgrade
 
 
 # Setting Up Swap Space
-Create an 8GB swap file to improve system performance.
+Create an 2GB swap file to improve system performance.
+
+1. Create an 2GB swap file:
+
+```sh
+sudo fallocate -l 2G /swapfile
+
+```
+2. Secure the swap file and set it up:
+
+```sh
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+
+```
+3. Add the swap file to the fstab file for automatic mounting:
+
+ ```sh
+sudo nano /etc/fstab
+```
+4. Add the following line to the end of the file:
+
+```sh
+ /swapfile swap swap defaults 0 0
+```
+5. Check if the swap is active:
+
+```sh
+
+htop
+
+
+```
+   
 
 # Installing LAMP Server
 Install and configure the LAMP stack, including Apache, MySQL, and PHP, along with additional PHP modules required for WordPress.
