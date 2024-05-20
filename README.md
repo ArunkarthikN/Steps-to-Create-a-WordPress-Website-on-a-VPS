@@ -187,6 +187,37 @@ During the mysql_secure_installation process, you will be prompted to configure 
 **Reload privilege tables now:** Yes<br>
 
 
+**If you encounter errors during the secure installation of MySQL, you can follow these steps to resolve them.**
+
+1. Resolve Installation Errors:
+   If encountering errors during secure installation, execute the following SQL commands:
+```sh
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_password';
+```
+This command changes the authentication method for the 'root' user to use the mysql_native_password plugin with the password 'your_password'.
+
+2. After executing the above command, login to MySQL and execute:
+
+```sh
+UNINSTALL COMPONENT "file://component_validate_password";
+```
+This command uninstalls the validate_password component, which can resolve certain installation errors related to password validation
+
+**Successful Secure Installation:**
+
+Once the above steps are successful and the secure installation completes without errors, login to MySQL to verify the successful installation.
+
+3. Reinstall Password Validation Component:
+
+After the secure installation is successful, you can reinstall the validate_password component for improved password security:
+
+```sh
+INSTALL COMPONENT "file://component_validate_password";
+```
+
+This command reinstalls the validate_password component, which enforces password strength requirements.
+   
+
 # Installing and Configuring PHP
 Modify PHP settings to accommodate WordPress requirements, ensuring optimal performance and functionality.
 
